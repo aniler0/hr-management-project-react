@@ -37,14 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^3.1.1",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "^2.5.1"
   }
 }
