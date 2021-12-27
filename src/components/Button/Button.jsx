@@ -1,5 +1,7 @@
 import { Arrow } from "components/icons";
+
 import "./styles.scss";
+
 const Button = ({ children }) => {
   return (
     <>

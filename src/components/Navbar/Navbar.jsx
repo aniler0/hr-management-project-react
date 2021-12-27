@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+
 import "./styles.scss";
 
 const Navbar = () => {
@@ -12,14 +13,10 @@ const Navbar = () => {
         <span className="link__Wrapper">
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/candidates"
-          >
+            to="/candidates">
             Candidates
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/about"
-          >
+          <NavLink className={({ isActive }) => (isActive ? "active" : "inactive")} to="/about">
             About
           </NavLink>
         </span>

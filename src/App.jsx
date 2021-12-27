@@ -1,9 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.scss";
-import Candidates from "./pages/Candidates";
-import About from "./pages/About";
 import { Layout } from "components";
 import Home from "pages/Home";
+import { Route, Routes } from "react-router-dom";
+
+import "./App.scss";
+import About from "./pages/About";
+import Candidates from "./pages/Candidates";
 
 function App() {
   return (

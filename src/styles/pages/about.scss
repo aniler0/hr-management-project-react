@@ -4,14 +4,16 @@
   align-items: center;
   justify-content: center;
   height: 80vh;
-  position: relative;
+
   .about__Text {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
     margin-top: 50px;
-    height: 90vh;
+    height: 60vh;
     width: 85%;
-    font-size: calc(0.7vw + 0.7em);
+    font-size: calc(0.7vw + 0.67em);
     h1 {
       font-weight: 500;
     }
@@ -23,7 +25,7 @@
     }
 
     .button__Area {
-      margin-top: 1.5em;
+      margin-top: 1em;
     }
   }
 }
