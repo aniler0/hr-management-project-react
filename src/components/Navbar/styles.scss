@@ -1,0 +1,46 @@
+@import "../../styles/globalStyles.scss";
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ghostwhite;
+  padding: 0.8em 0.5em;
+  .navbar__Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    h1 {
+      font-size: calc(0.8vw + 0.7em);
+      user-select: none;
+    }
+
+    .link__Wrapper {
+      display: flex;
+      a {
+        display: flex;
+        justify-content: center;
+        padding: 0.7em;
+        align-items: center;
+        font-size: calc(0.6vw + 0.7em);
+        font-weight: 400;
+        transition: color 0.2s ease-in;
+        color: rgb(135, 135, 135);
+
+        &:hover {
+          color: black;
+        }
+
+        &.active {
+          color: black;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
