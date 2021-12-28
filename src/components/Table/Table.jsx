@@ -1,7 +1,10 @@
 import { Input } from "components";
+import { Navigate, useNavigate } from "react-router-dom";
+import { sort } from "utils/sort";
 import "./styles.scss";
 
-const Table = () => {
+const Table = ({ users }) => {
+  let navigate = useNavigate();
   return (
     <div className="table__Wrapper">
       <div className="filter__Area">
@@ -17,90 +20,22 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>Knocky sdfsda</td>
-            <td>0556486468</td>
-            <td>
-              <p
-                className="view__More"
-                onClick={() => {
-                  console.log("clicked");
-                }}
-              >
-                View More
-              </p>
-            </td>
-          </tr>
+          {sort(users).map((user, key) => (
+            <tr key={key}>
+              <td>{user.name}</td>
+              <td>{user.phone}</td>
+              <td>
+                <p
+                  className="view__More"
+                  onClick={() => {
+                    navigate(`${user.id}`);
+                  }}
+                >
+                  View More
+                </p>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

@@ -1,0 +1,23 @@
+.userDetail__Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  .user__Card {
+    width: 85%;
+    height: 60%;
+    font-size: calc(0.7vw + 0.8em);
+
+    h1 {
+      font-weight: 500;
+      font-size: calc(0.7vw + 1.7em);
+    }
+
+    .user {
+      margin-top: 4em;
+      font-size: calc(0.5vw + 1em);
+    }
+  }
+}
