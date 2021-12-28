@@ -32,23 +32,22 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {users &&
-            filterByName(sort(users), inputValue).map((user, key) => (
-              <tr key={key}>
-                <td>{user.name}</td>
-                <td>{user.phone}</td>
-                <td>
-                  <p
-                    className="view__More"
-                    onClick={() => {
-                      navigate(`${user.id}`);
-                    }}
-                  >
-                    View More
-                  </p>
-                </td>
-              </tr>
-            ))}
+          {filterByName(users, inputValue).map((user, key) => (
+            <tr key={key}>
+              <td>{user.name}</td>
+              <td>{user.phone}</td>
+              <td>
+                <p
+                  className="view__More"
+                  onClick={() => {
+                    navigate(`${user.id}`);
+                  }}
+                >
+                  View More
+                </p>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
