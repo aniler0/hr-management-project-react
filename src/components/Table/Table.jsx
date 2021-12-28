@@ -32,7 +32,7 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {filterByName(users, inputValue).map((user, key) => (
+          {filterByName(sort(users), inputValue).map((user, key) => (
             <tr key={key}>
               <td>{user.name}</td>
               <td>{user.phone}</td>

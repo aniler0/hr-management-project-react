@@ -11,8 +11,8 @@ const API = axios.create({
 export const getUsers = async (setUsers) => {
   const res = await API.get("/users");
   const data = res.data;
-  const sortedData = sort(data);
-  setUsers(sortedData);
+
+  setUsers(data);
 };
 export const getUserById = async (setUser, id) => {
   console.log(id);
