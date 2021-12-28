@@ -1,7 +1,6 @@
 import { Input } from "components";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { filterByName } from "utils/filter";
 import { sort } from "utils/sort";
 import "./styles.scss";
 
@@ -29,8 +28,11 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {users &&
-            filterByName(sort(users), inputValue).map((user, key) => (
+          {sort(users)
+            .filter((user) =>
+              user.name.trim().toLowerCase().includes(inputValue)
+            )
+            .map((user, key) => (
               <tr key={key}>
                 <td>{user.name}</td>
                 <td>{user.phone}</td>
