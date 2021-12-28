@@ -1,14 +1,23 @@
 import { Input } from "components";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { filterByName } from "utils/filter";
 import { sort } from "utils/sort";
 import "./styles.scss";
 
 const Table = ({ users }) => {
   let navigate = useNavigate();
+
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <div className="table__Wrapper">
       <div className="filter__Area">
-        <Input placeholder="Search Users by Name" />
+        <Input
+          value={inputValue}
+          onChange={setInputValue}
+          placeholder="Search Users by Name"
+        />
       </div>
 
       <table>
@@ -20,7 +29,7 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {sort(users).map((user, key) => (
+          {filterByName(sort(users), inputValue).map((user, key) => (
             <tr key={key}>
               <td>{user.name}</td>
               <td>{user.phone}</td>
