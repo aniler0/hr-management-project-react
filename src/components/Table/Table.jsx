@@ -28,7 +28,7 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {sort(users)
+          {users && sort(users)
             .filter((user) =>
               user.name.trim().toLowerCase().includes(inputValue)
             )
