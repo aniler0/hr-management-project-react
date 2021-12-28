@@ -6,19 +6,15 @@
   height: 80vh;
 
   .about__Text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 50px;
-    height: 60vh;
+    margin-top: 20px;
     width: 85%;
     font-size: calc(0.7vw + 0.67em);
     h1 {
       font-weight: 500;
+      font-size: calc(0.7vw + 1.4em);
     }
     .paragraph__Wrapper {
-      margin-top: 2em;
+      margin-top: 1.2em;
       p {
         margin-bottom: 1.4em;
       }
