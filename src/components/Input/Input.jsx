@@ -1,5 +1,7 @@
 import { Search } from "components/icons";
+
 import "./styles.scss";
+
 const Input = ({ placeholder, value, onChange }) => {
   const handleChange = (e) => {
     onChange(e.target.value);

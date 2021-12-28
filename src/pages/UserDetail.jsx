@@ -1,6 +1,8 @@
-import { getUserById } from "api/axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import { getUserById } from "api/axios";
+
 import "styles/pages/userdetail.scss";
 
 const UserDetail = () => {

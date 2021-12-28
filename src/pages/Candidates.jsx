@@ -1,6 +1,9 @@
-import { getUsers } from "api/axios";
-import { Table } from "components";
 import React, { useEffect, useState } from "react";
+
+import { Table } from "components";
+
+import { getUsers } from "api/axios";
+
 import "styles/pages/candidates.scss";
 
 const Candidates = () => {
