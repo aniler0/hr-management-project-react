@@ -1,18 +1,105 @@
+import { Input } from "components";
 import "./styles.scss";
 
 const Table = () => {
   return (
     <div className="table__Wrapper">
-      <div></div>
+      <div className="filter__Area">
+        <Input placeholder="Search Users by Name" />
+      </div>
+
       <table>
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>PHONE NUMBER</th>
+            <th></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr className="table__Top">
-            <td>NAME</td>
-            <td>PHONE NUMBER</td>
+          <tr>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
           </tr>
           <tr>
-            <td>Knocky</td>
-            <td>Flor</td>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Knocky sdfsda</td>
+            <td>0556486468</td>
+            <td>
+              <p
+                className="view__More"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                View More
+              </p>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -1,13 +1,70 @@
+@import "../../styles/globalStyles.scss";
+
 .table__Wrapper {
   width: 80%;
   background: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  max-height: 80%;
+
+  .filter__Area {
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+  }
   table {
     border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    display: block;
+    max-height: 500px;
+
+    thead {
+      display: block;
+      background: $secondaryWhite;
+      color: $primaryBlack;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $fontPurple;
+    }
+    tbody {
+      display: block;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 300px;
+    }
+
     tr {
-      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      border: 1px solid #ede9fc;
+
       td {
+        display: block;
+        font-size: calc(0.4vw + 0.55em);
+        font-weight: 300;
+      }
+      th {
+        display: block;
+        font-size: calc(0.4vw + 0.55em);
+        text-align: left;
+        font-weight: 500;
+      }
+      th,
+      td {
+        width: 400px;
+        padding: 1em 2em;
+      }
+
+      .view__More {
+        font-size: calc(0.4vw + 0.7em);
+        color: $fontPurple;
+        cursor: pointer;
+        width: 80px;
       }
     }
   }

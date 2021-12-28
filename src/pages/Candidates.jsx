@@ -4,7 +4,7 @@ import "styles/pages/candidates.scss";
 
 const Candidates = () => {
   return (
-    <div className="candidates__Wrapper">
+    <div className="candidates__Container">
       <Table />
     </div>
   );

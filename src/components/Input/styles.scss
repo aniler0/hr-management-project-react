@@ -1,0 +1,24 @@
+@import "../../styles/globalStyles.scss";
+
+.input__Wrapper {
+  background: $secondaryWhite;
+  border-radius: 6px;
+  max-width: 392px;
+
+  .input__Container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .search__Icon {
+      padding: 10px;
+    }
+
+    input {
+      background-color: transparent;
+      outline: none;
+      width: 85%;
+      padding: 5px 0 5px 0;
+    }
+  }
+}
