@@ -1,11 +1,7 @@
 import axios from "axios";
-import { sort } from "utils/sort";
-
-const DEV_API = "https://jsonplaceholder.typicode.com";
-const PROD_API = "";
 
 const API = axios.create({
-  baseURL: process.env.NODE_ENV === "development" ? DEV_API : PROD_API,
+  baseURL: "https://jsonplaceholder.typicode.com",
 });
 
 export const getUsers = async (setUsers) => {
