@@ -1,25 +1,25 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Layout } from "components";
+import { Navbar } from "components";
 
-import Home from "pages/Home";
-import About from "./pages/About";
-import Candidates from "./pages/Candidates";
-import UserDetail from "./pages/UserDetail";
-
-import "./App.scss";
+const Home = lazy(() => import("pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Candidates = lazy(() => import("./pages/Candidates"));
+const UserDetail = lazy(() => import("./pages/UserDetail"));
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
+      <Navbar />
+      <Suspense fallback={<p>Loading...</p>}>
+        <Routes>
           <Route index element={<Home />} />
           <Route path="candidates" element={<Candidates />} />
           <Route path="/candidates/:id" element={<UserDetail />} />
           <Route path="about" element={<About />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </Suspense>
     </>
   );
 }

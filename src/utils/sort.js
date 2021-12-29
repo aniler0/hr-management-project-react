@@ -1,4 +1,4 @@
-export const sort = (data) => {
+const sort = (data) => {
   const sorted =
     data &&
     data.sort((a, b) => {
@@ -9,3 +9,4 @@ export const sort = (data) => {
 
   return sorted;
 };
+export default sort;

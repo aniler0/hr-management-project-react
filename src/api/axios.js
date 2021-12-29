@@ -7,7 +7,6 @@ const API = axios.create({
 export const getUsers = async (setUsers) => {
   const res = await API.get("/users");
   const data = res.data;
-
   setUsers(data);
 };
 export const getUserById = async (setUser, id) => {

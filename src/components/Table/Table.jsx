@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Input } from "components";
 
-import { filterByName } from "utils/filter";
-import { sort } from "utils/sort";
+import { sort, filter } from "utils";
 
 import "./styles.scss";
 
@@ -32,24 +31,22 @@ const Table = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {filterByName(sort(users), inputValue.toLowerCase()).map(
-            (user, key) => (
-              <tr key={key}>
-                <td>{user.name}</td>
-                <td>{user.phone}</td>
-                <td>
-                  <p
-                    className="view__More"
-                    onClick={() => {
-                      navigate(`${user.id}`);
-                    }}
-                  >
-                    View More
-                  </p>
-                </td>
-              </tr>
-            )
-          )}
+          {filter(sort(users), inputValue.toLowerCase()).map((user, key) => (
+            <tr key={key}>
+              <td>{user.name}</td>
+              <td>{user.phone}</td>
+              <td>
+                <p
+                  className="view__More"
+                  onClick={() => {
+                    navigate(`${user.id}`);
+                  }}
+                >
+                  View More
+                </p>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
